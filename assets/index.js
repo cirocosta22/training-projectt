@@ -1,30 +1,27 @@
-const array = ['ciro', 'ciro']
+const habitante = () => {
+  const pessoas = [
+    { name: 'ciro', salario: 2300, filhos: 3 },
+    { name: 'vera', salario: 2400, filhos: 7 },
+    { name: 'Ramon', salario: 1300, filhos: 4 },
+    { name: 'Bartolomeu', salario: 1500, filhos: 2 }
+  ]
 
-console.log(array[0] == array[1])
+  let totalSalario = 0
 
-const pessoa = {
-  name: 'vera',
-  age: 57,
-  height: 1.63,
-  pessoa2: {
-    name: 'ciro',
-    age: 21,
-    height: 1.83,
-    adress: 'travessa evandro cairo 56'
-  },
-  pessoa3: {
-    name: 'Bartolomeu',
-    age: 54,
-    height: 1.75,
-    adress: 'travessa evandro cairo 56'
-  },
-  pessoa4: {
-    name: 'joao',
-    age: 23,
-    height: 1.66,
-    adress: 'travessa evandro cairo 56'
+  pessoas.forEach(pessoa => {
+    totalSalario += pessoa.salario
+  })
+  let percapta = totalSalario / pessoas.length
+  if (
+    pessoas[1].salario > pessoas[0].salario &&
+    pessoas[1].salario > pessoas[3].salario &&
+    pessoas[1].salario > pessoas[2].salario
+  ) {
+    console.log(`maior salario mensal é o de ${pessoas[1].name}`)
+  } else {
+    console.log('pessoas')
   }
 }
-console.log(pessoa.pessoa4.name)
-const random = Math.floor(Math.random() * (100 - 10) + 10)
-console.log(random)
+habitante()
+
+// problema 5 resolvido
